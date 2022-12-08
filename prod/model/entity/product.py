@@ -11,6 +11,9 @@ class Product:
     def price(self, price):
         if price >= 0:
             self._price = price
+        else:
+            if not hasattr(self, "_price"):
+                self._price = 0
 
     @price.deleter
     def price(self):
